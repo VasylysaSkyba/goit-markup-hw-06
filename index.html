@@ -411,12 +411,48 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" re
               <use href="./images/icons.svg#close-modal"></use>
             </svg>
           </button>
+          <p class="modal-tittle">Leave your contacts and we will call you back</p>
+          <form class="modal-form">
+            <div class="modal-fiaeld">
+            <label class="input-text" for="name">Name</label>
+            <div class="input-wrap">
+            <input class="modal-input" name="name" type="text" id="name" placeholder="">
+            <svg class="modal-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+            </div>
+            </div>
+
+            <div class="modal-fiaeld">
+              <label class="input-text" for="phone">Phone</label>
+              <div class="input-wrap">
+              <input class="modal-input" name="phone" type="tel" id="phone" placeholder="">
+              <svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              </div>
+              </div>
+
+              <div class="modal-fiaeld">
+                <label class="input-text" for="email">Email</label>
+                <div class="input-wrap">
+                <input class="modal-input" name="email" type="email" id="email" placeholder="">
+                <svg class="modal-icon" width="18" height="24">
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+                </div>
+                </div>
+            
+                <div class="modal-fiaeld">
+                  <label class="input-text" for="use-text">Comment</label>
+                  <textarea name="use-text" id="use-text" class="modal-massage" placeholder="Text input"></textarea>
+                </div>
+            <button type="submit" class="submit-btn">Send</button>
+          </form>
         </div>
       </div>
       <script src="./js/modal.js"></script>
   </body>
 </html>
-
-
 
 
