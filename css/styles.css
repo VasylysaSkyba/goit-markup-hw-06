@@ -690,7 +690,10 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.modal-close:is(:hover, :focus) {
+  background: var(--accent-color);
+  fill: #fcfcfc;
+}
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -770,7 +773,52 @@ img {
   margin-bottom: 8px;
 }
 
+.check-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #757575;
+  display: flex;
+}
 
+.check-text::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+ margin-right: 8px;
+}
+
+.input-check:checked + .check-text::before {
+  border-color: var(--accent-color);
+  border: none;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+ background-color: var(--accent-color)
+}
+
+.input-check:focus + .check-text::before {
+  border-color: var(--accent-color)
+}
+
+.input-check {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .submit-btn {
   display: flex;
   padding: 16px 32px;
